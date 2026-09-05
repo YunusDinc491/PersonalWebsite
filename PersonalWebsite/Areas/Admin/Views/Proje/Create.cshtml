@@ -1,0 +1,38 @@
+﻿@model PersonalWebsite.Models.Proje
+@{
+    ViewData["Title"] = "Yeni Proje";
+}
+
+<h1>Yeni Proje Ekle</h1>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data" class="admin-form">
+    <label>
+        Kategori (rozet metni)
+        <input type="text" name="Kategori" placeholder="Örn: Kişisel, E-Ticaret" />
+    </label>
+    <label>
+        Proje Adı
+        <input type="text" name="ProjeAdi" required />
+    </label>
+    <label>
+        Açıklama
+        <textarea name="ProjeAciklama" rows="4" required></textarea>
+    </label>
+    <label>
+        Kullanılan Teknolojiler (virgülle ayır)
+        <input type="text" name="KullanilanTeknolojiler" placeholder="C#, .NET, SQL Server" />
+    </label>
+    <label>
+        Canlı Demo Linki (opsiyonel)
+        <input type="text" name="DemoUrl" placeholder="https://..." />
+    </label>
+    <label>
+        Kaynak Kod Linki (opsiyonel)
+        <input type="text" name="KaynakKodUrl" placeholder="https://github.com/..." />
+    </label>
+    <label>
+        Proje Görseli
+        <input type="file" name="projeFotoFile" accept="image/*" />
+    </label>
+    <button type="submit" class="admin-btn">Kaydet</button>
+</form>

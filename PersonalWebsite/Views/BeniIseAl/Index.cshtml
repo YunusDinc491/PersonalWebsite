@@ -1,0 +1,107 @@
+﻿@model PersonalWebsite.Models.BeniIseAl
+@{
+    ViewData["Title"] = "Beni İşe Al";
+}
+
+<section class="page-hero">
+    <span class="eyebrow reveal">BENİ İŞE AL!</span>
+    <h1 class="reveal">Beni daha yakından tanıyın, CV'mi indirin.</h1>
+    <p class="reveal">Aşağıda özgeçmişimin özetini bulabilir, tam CV'mi indirebilir ya da doğrudan benimle iletişime geçebilirsiniz.</p>
+    <div class="cv-actions reveal">
+        @if (Model != null)
+        {
+            <a href="@Model.Cv" class="nav-btn cv-download" download>CV'yi İndir ↓</a>
+        }
+        <a href="mailto:ynsdinc333@gmail.com" class="nav-btn">E-posta Gönder</a>
+    </div>
+</section>
+
+<section class="cv-section">
+    <span class="eyebrow reveal">DENEYİM</span>
+    <h2 class="reveal">Yolculuğum.</h2>
+    <div class="timeline">
+        <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+                <span class="timeline-date">2026</span>
+                <h3>Beklemede</h3>
+                <p>Henüz işe almadığınız için şimdilik kendi kendime projeler üretiyorum. Sektörde yeterince ilerlemeden işe almak için geç kalmayın; yeterli birikimden sonra ben de sizi beğenmeyebilirim. Şirketine yatırım yapmak isteyenleri aşağıdaki iletişim alanına bekliyorum.</p>
+            </div>
+        </div>
+        <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+                <span class="timeline-date">2024 — 2027</span>
+                <h3>Beykent Üniversitesi / Mechanical Engineering</h3>
+                <p>Tam burslu olarak okuyorum. O kadar sınav kazandık belirtmek istedim.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cv-section">
+    <div class="contact-grid">
+        <div>
+            <span class="eyebrow reveal">İLETİŞİM</span>
+            <h2 class="reveal">Konuşalım.</h2>
+            <p class="reveal">Bir pozisyon, bir staj ya da sadece merhaba demek için — kanallardan biri üzerinden ulaşabilirsiniz.</p>
+            @if (TempData["Basarili"] != null)
+            {
+                <p style="color:var(--lime); margin-top:12px;">@TempData["Basarili"]</p>
+            }
+            <div class="socials reveal">
+                <a href="https://github.com/YunusDinc491" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" /></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/yunusdinc/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z" /></svg>
+                </a>
+                <a href="https://www.instagram.com/yunusdinc491/" aria-label="Instagram" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" /></svg>
+                </a>
+                <a href="https://x.com/yunusdinc491" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.4 22h-6.6l-5.2-6.8L5.6 22H2.3l7.7-8.8L1.6 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z" /></svg>
+                </a>
+                <a href="mailto:ynsdinc333@gmail.com" aria-label="E-mail">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
+                </a>
+                <a href="https://wa.me/905347300634" aria-label="WhatsApp" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.87 9.87 0 0 0 4.62 1.14h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.09c-.24.68-1.19 1.25-1.95 1.41-.52.11-1.2.2-3.49-.75-2.93-1.21-4.82-4.18-4.97-4.37-.15-.2-1.19-1.58-1.19-3.02 0-1.44.75-2.14 1.02-2.44.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.15.12.33.02.53-.1.19-.15.31-.3.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.15.46.13.63-.08.17-.2.72-.84.92-1.13.19-.29.39-.24.65-.14.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.13.07.75-.17 1.42Z" /></svg>
+                </a>
+            </div>
+        </div>
+
+        <form class="contact-form reveal" asp-controller="BeniIseAl" asp-action="Gonder" method="post">
+            <h3>Ben size dönerim..</h3>
+            <div class="form-row">
+                <label>
+                    <span>İsim Soyisim</span>
+                    <input type="text" name="Name" placeholder="Adınız Soyadınız" required />
+                </label>
+                <label>
+                    <span>Telefon Numarası</span>
+                    <input type="tel" name="TelNo" placeholder="05xx xxx xx xx" />
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Firma Adı</span>
+                    <input type="text" name="FirmaAdi" placeholder="Şirketiniz" />
+                </label>
+                <label>
+                    <span>E-posta</span>
+                    <input type="email" name="Eposta" placeholder="ornek@eposta.com" required />
+                </label>
+            </div>
+            <label>
+                <span>Konu</span>
+                <input type="text" name="Konu" placeholder="Mesajınızın konusu" />
+            </label>
+            <label>
+                <span>Mesajınız</span>
+                <textarea name="Mesajiniz" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
+            </label>
+            <button type="submit" class="nav-btn cv-download">Gönder ↗</button>
+        </form>
+    </div>
+</section>

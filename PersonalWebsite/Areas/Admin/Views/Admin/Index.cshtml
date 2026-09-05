@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Dashboard</h1>
+
+<div class="admin-cards">
+    <div class="admin-card">
+        <span class="admin-card-label">Toplam Proje</span>
+        <span class="admin-card-value">@ViewBag.ProjeSayisi</span>
+    </div>
+    <div class="admin-card">
+        <span class="admin-card-label">Gelen Mesaj</span>
+        <span class="admin-card-value">@ViewBag.MesajSayisi</span>
+    </div>
+    <div class="admin-card">
+        <span class="admin-card-label">CV Durumu</span>
+        <span class="admin-card-value">@(ViewBag.CvVarMi ? "Yüklü" : "Yüklenmedi")</span>
+    </div>
+</div>

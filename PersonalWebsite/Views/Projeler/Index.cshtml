@@ -1,0 +1,66 @@
+﻿@model List<PersonalWebsite.Models.Proje>
+@{
+    ViewData["Title"] = "Projelerim";
+}
+
+<section class="page-hero">
+    <span class="eyebrow reveal">PROJELERİM</span>
+    <h1 class="reveal">Her adımında "Bu neden böyle?" diye sorgulayarak tamamladığım projelerim</h1>
+    <p class="reveal">Aşağıda yer alan projeler; her aşamasında yeni bir kavramı deneyimlediğim ve edindiğim teorik bilgileri pratiğe dökerek kendi geliştirdiğim çalışmalardır. Asıl tutkum backend ve sistem mimarileri olduğu için, frontend tarafında üretkenliğimi artırmak adına yapay zeka destekli modern araçlardan güç alıyorum. Ancak arayüz ile veri tabanı (frontend-backend) entegrasyonlarını tamamen bizzat kurgulayarak sistemin bütününe dair derin bir hakimiyet kazanıyorum. En büyük hedefim; DevOps süreçlerini ve bulut (Cloud) teknolojilerini de süreçlerime dâhil ederek mimari açıdan karmaşık, ölçeklenebilir ve sürdürülebilir sistemler inşa etmek. Gelişim serüvenimi ve yeni ekleyeceğim projeleri bu alandan takip edebilirsiniz.</p>
+</section>
+
+<section class="projects-grid-section">
+    <div class="projects-grid">
+        @if (!Model.Any())
+        {
+            <p>Henüz eklenmiş bir proje yok.</p>
+        }
+        else
+        {
+            var sira = 1;
+            foreach (var proje in Model)
+            {
+                <article class="project-card reveal">
+                    <div class="project-thumb">
+                        @if (!string.IsNullOrEmpty(proje.Kategori))
+                        {
+                            <span class="project-badge">@proje.Kategori</span>
+                        }
+                        @if (!string.IsNullOrEmpty(proje.ProjeFoto))
+                        {
+                            <img src="@proje.ProjeFoto" alt="@proje.ProjeAdi" style="width:100%;height:100%;object-fit:cover;" />
+                        }
+                        else
+                        {
+                            <span>@sira.ToString("00")</span>
+                        }
+                    </div>
+                    <div class="project-body">
+                        <h3>@proje.ProjeAdi</h3>
+                        <p>@proje.ProjeAciklama</p>
+                        <div class="project-tags">
+                            @foreach (var tech in proje.KullanilanTeknolojiler.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+                            {
+                                <span>@tech</span>
+                            }
+                        </div>
+                        @if (!string.IsNullOrEmpty(proje.DemoUrl) || !string.IsNullOrEmpty(proje.KaynakKodUrl))
+                        {
+                            <div class="project-links">
+                                @if (!string.IsNullOrEmpty(proje.DemoUrl))
+                                {
+                                    <a href="@proje.DemoUrl" target="_blank" rel="noopener">Canlı Demo ↗</a>
+                                }
+                                @if (!string.IsNullOrEmpty(proje.KaynakKodUrl))
+                                {
+                                    <a href="@proje.KaynakKodUrl" target="_blank" rel="noopener">Kaynak Kod ↗</a>
+                                }
+                            </div>
+                        }
+                    </div>
+                </article>
+                sira++;
+            }
+        }
+    </div>
+</section>

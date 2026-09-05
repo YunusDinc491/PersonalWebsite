@@ -1,0 +1,306 @@
+﻿@{
+    ViewData["Title"] = "Anasayfa";
+}
+
+<section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <svg class="hero-circuit" viewBox="0 0 700 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path id="p1" d="M 40 700 L 40 500 L 220 500 L 220 320 L 420 320 L 420 120 L 620 120" />
+        <path id="p2" d="M 660 640 L 500 640 L 500 460 L 300 460 L 300 260 L 120 260 L 120 80" />
+        <path id="p3" d="M 60 400 L 260 400 L 260 560 L 460 560 L 460 700 L 660 700" />
+        <path id="p4" d="M 620 300 L 460 300 L 460 180 L 260 180 L 260 60" />
+
+        <circle class="node" cx="40" cy="700" r="4" />
+        <circle class="node" cx="220" cy="500" r="4" />
+        <circle class="node" cx="420" cy="320" r="4" />
+        <circle class="node" cx="620" cy="120" r="4" />
+        <circle class="node" cx="660" cy="640" r="4" />
+        <circle class="node" cx="500" cy="460" r="4" />
+        <circle class="node" cx="300" cy="260" r="4" />
+        <circle class="node" cx="120" cy="80" r="4" />
+        <circle class="node" cx="60" cy="400" r="4" />
+        <circle class="node" cx="260" cy="560" r="4" />
+        <circle class="node" cx="460" cy="700" r="4" />
+        <circle class="node" cx="660" cy="700" r="4" />
+        <circle class="node" cx="620" cy="300" r="4" />
+        <circle class="node" cx="260" cy="180" r="4" />
+        <circle class="node" cx="260" cy="60" r="4" />
+
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="6s" repeatCount="indefinite"><mpath href="#p1" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="7.5s" begin="1s" repeatCount="indefinite"><mpath href="#p2" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="5s" begin="2s" repeatCount="indefinite"><mpath href="#p3" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="8s" begin=".5s" repeatCount="indefinite"><mpath href="#p4" /></animateMotion>
+        </circle>
+    </svg>
+    <svg class="hero-circuit-mobile" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path id="mp1" d="M 20 160 L 20 100 L 100 100 L 100 40 L 200 40 L 200 90 L 280 90" />
+        <path id="mp2" d="M 380 20 L 320 20 L 320 70 L 240 70 L 240 130 L 160 130 L 160 170" />
+        <path id="mp3" d="M 60 30 L 60 60 L 140 60 L 140 150 L 260 150 L 260 180 L 340 180" />
+
+        <circle class="node" cx="20" cy="160" r="3.5" />
+        <circle class="node" cx="100" cy="100" r="3.5" />
+        <circle class="node" cx="200" cy="40" r="3.5" />
+        <circle class="node" cx="280" cy="90" r="3.5" />
+        <circle class="node" cx="380" cy="20" r="3.5" />
+        <circle class="node" cx="320" cy="70" r="3.5" />
+        <circle class="node" cx="240" cy="130" r="3.5" />
+        <circle class="node" cx="160" cy="170" r="3.5" />
+        <circle class="node" cx="60" cy="30" r="3.5" />
+        <circle class="node" cx="140" cy="60" r="3.5" />
+        <circle class="node" cx="260" cy="150" r="3.5" />
+        <circle class="node" cx="340" cy="180" r="3.5" />
+
+        <circle class="pulse" r="3">
+            <animateMotion dur="5s" repeatCount="indefinite"><mpath href="#mp1" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3">
+            <animateMotion dur="6s" begin="1s" repeatCount="indefinite"><mpath href="#mp2" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3">
+            <animateMotion dur="4.5s" begin="2s" repeatCount="indefinite"><mpath href="#mp3" /></animateMotion>
+        </circle>
+    </svg>
+    <div class="hero-content">
+        <h1 class="reveal-lines">
+            <span class="line"><span>Şirketinize</span> <span>benimle</span> <span>değer</span></span>
+            <span class="line"><span>katmaya</span> <span>hoşgeldiğiniz.</span></span>
+        </h1>
+        <p class="hero-sub">Sektörde kalıcı ve sağlam adımlar atmak üzere yola çıkmış bir developer adayıyım. Lisans öğrenimime devam ederken, teorik vizyonumu pratikle birleştiriyor ve kendimi geliştirmek için her gün yeni projeler üretiyorum.</p>
+        <p class="hero-sub">Şu ana kadar odak noktam C# ve nesne yönelimli mimariler olsa da, kendimi asla tek bir teknolojiyle sınırlandırmıyorum. Full-Stack perspektifiyle uçtan uca uygulamalar geliştiriyor; ancak asıl heyecanımı mimariyi kurguladığım, veri tabanı yönetimini sağladığım Backend tarafında buluyorum. Ayrıca yazılımın sadece kod yazmaktan ibaret olmadığının bilinciyle, modern sistem yapılarını anlamak adına Cloud ve DevOps süreçlerine de büyük ilgi duyuyor, bu alanlarda kendimi sürekli besliyorum.</p>
+        <p class="hero-sub">Şu anda edindiğim bu teknik altyapıyı profesyonel bir ekibin parçası olarak gerçek dünya projelerinde değerlendirmek üzere staj fırsatları arıyorum. Öğrenmeye açık, meraklı ve yazdığı her satır kodun arkasında durabilen biri olarak, ekibinize kod kadar emek ve değer katmaya hazırım.</p>
+    </div>
+
+    <div class="tech-marquee" aria-hidden="false">
+        <div class="tech-marquee-fade tech-marquee-fade-left"></div>
+        <div class="tech-marquee-fade tech-marquee-fade-right"></div>
+        <div class="tech-track" id="techTrack"></div>
+    </div>
+
+    <div class="scroll-hint">
+        <span>SCROLL TO EXPLORE</span>
+        <svg width="14" height="20" viewBox="0 0 14 20"><path d="M7 0v18M1 12l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" /></svg>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-media reveal">
+        <div class="portrait">
+            <img src="~/uploads/hakkimda.jpg" alt="Yunus Dinç" class="portrait-photo" />
+            <div class="portrait-glow"></div>
+            
+        </div>
+    </div>
+    <div class="about-copy">
+        <span class="eyebrow reveal">01 / HAKKIMDA</span>
+        <h2 class="reveal" style="margin-bottom:16px;">Fikirleri çalışan sistemlere dönüştürmeyi seviyorum.</h2>
+        
+        <p class="reveal" style="margin-bottom:16px;">Beykent Üniversitesi Makine Mühendisliği öğrencisiyim. Kariyerimi inşa etmek istediğim yazılım sektöründe kendimi geliştirme aşamasındayım. Mühendislik okumanın getirdiği analitik düşünme ve problem çözme becerilerini yazılım alanında kullanıyorum. "Boş gün boş insan" prensibiyle her gün hem yeni projeler geliştirerek hem de yeni teknolojiler öğrenerek ve öğrendiklerimi projelerimde kullanarak kendimi geliştirmeye çalışıyorum.</p>
+        
+        <p class="reveal" style="margin-bottom:16px;">Amacım geliştirme sürecinin başından yayın aşamasına kadar sorumluluk alan; ölçeklenebilir, hızlı ve anlaşılır dijital ürünler tasarlamak. Kendimi geliştirmeye ve uçtan uca kusursuz mimariler oluşturmak istiyorum. Hedefim, bir projenin ilk satırından son kullanıcıya ulaştığı ana ve sonrasındaki sürece kadar sorunsuz çalışan sistemler kurabilmek; bu doğrultuda Cloud sistemlerinin kullanımında ve DevOps süreçlerinde uzmanlaşmak.</p>
+        
+        <p class="reveal" style="margin-bottom:16px;">İçinde bulunduğunuz kişisel web sitem, projelerimi ve gelişimimi zaman içinde sizinle paylaşmak içindir. <a asp-controller="Projeler" asp-action="Index" class="text-link">Projelerim</a> bölümünden göz gezdirmeyi unutmayın.</p>
+        <div class="meta-row reveal">
+            <div><span class="meta-label">ODAK</span> — Backend Developer</div>
+            <div><span class="meta-label">MERKEZ</span> — İstanbul / Kağıthane</div>
+        </div>
+        <div class="socials reveal">
+            <a href="https://github.com/YunusDinc491" aria-label="GitHub" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" /></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/yunusdinc/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z" /></svg>
+            </a>
+            <a href="https://www.instagram.com/yunusdinc491/" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" /></svg>
+            </a>
+            <a href="https://x.com/yunusdinc491" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.4 22h-6.6l-5.2-6.8L5.6 22H2.3l7.7-8.8L1.6 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z" /></svg>
+            </a>
+            <a href="mailto:ynsdinc333@gmail.com" aria-label="E-mail">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
+            </a>
+            <a href="https://wa.me/905347300634" aria-label="WhatsApp" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.87 9.87 0 0 0 4.62 1.14h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.09c-.24.68-1.19 1.25-1.95 1.41-.52.11-1.2.2-3.49-.75-2.93-1.21-4.82-4.18-4.97-4.37-.15-.2-1.19-1.58-1.19-3.02 0-1.44.75-2.14 1.02-2.44.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.15.12.33.02.53-.1.19-.15.31-.3.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.15.46.13.63-.08.17-.2.72-.84.92-1.13.19-.29.39-.24.65-.14.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.13.07.75-.17 1.42Z" /></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="status-marquee">
+    <div class="status-track" id="statusTrack"></div>
+</div>
+
+<section class="work" id="work">
+    <svg class="work-circuit" width="100%" height="100%" viewBox="0 0 1400 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path id="wp1" d="M 0 500 L 200 500 L 200 300 L 450 300 L 450 100 L 750 100" />
+        <path id="wp2" d="M 1400 80 L 1150 80 L 1150 250 L 900 250 L 900 450 L 650 450 L 650 560" />
+        <path id="wp3" d="M 60 100 L 60 220 L 330 220 L 330 400 L 600 400 L 600 560" />
+        <path id="wp4" d="M 1400 480 L 1200 480 L 1200 320 L 980 320 L 980 150 L 780 150" />
+        <path id="wp5" d="M 0 580 L 250 580 L 250 380 L 500 380 L 500 550 L 780 550" />
+        <path id="wp6" d="M 1400 570 L 1100 570 L 1100 490 L 850 490 L 850 590" />
+
+        <circle class="node" cx="200" cy="500" r="4" /><circle class="node" cx="200" cy="300" r="4" />
+        <circle class="node" cx="450" cy="300" r="4" /><circle class="node" cx="450" cy="100" r="4" />
+        <circle class="node" cx="1150" cy="80" r="4" /><circle class="node" cx="1150" cy="250" r="4" />
+        <circle class="node" cx="900" cy="250" r="4" /><circle class="node" cx="900" cy="450" r="4" />
+        <circle class="node" cx="650" cy="450" r="4" /><circle class="node" cx="60" cy="220" r="4" />
+        <circle class="node" cx="330" cy="220" r="4" /><circle class="node" cx="330" cy="400" r="4" />
+        <circle class="node" cx="600" cy="400" r="4" /><circle class="node" cx="1200" cy="480" r="4" />
+        <circle class="node" cx="1200" cy="320" r="4" /><circle class="node" cx="980" cy="320" r="4" />
+        <circle class="node" cx="980" cy="150" r="4" />
+        <circle class="node" cx="250" cy="580" r="4" /><circle class="node" cx="250" cy="380" r="4" />
+        <circle class="node" cx="500" cy="380" r="4" /><circle class="node" cx="500" cy="550" r="4" />
+        <circle class="node" cx="1100" cy="570" r="4" /><circle class="node" cx="1100" cy="490" r="4" />
+        <circle class="node" cx="850" cy="490" r="4" />
+
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="9s" repeatCount="indefinite"><mpath href="#wp1" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="10s" begin="1.5s" repeatCount="indefinite"><mpath href="#wp2" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="7s" begin="3s" repeatCount="indefinite"><mpath href="#wp3" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="11s" begin=".7s" repeatCount="indefinite"><mpath href="#wp4" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="8s" begin="2.2s" repeatCount="indefinite"><mpath href="#wp5" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="9.5s" begin="4s" repeatCount="indefinite"><mpath href="#wp6" /></animateMotion>
+        </circle>
+    </svg>
+    <div class="work-inner">
+    <span class="eyebrow reveal">02 / WORK</span>
+    <h2 class="reveal">Her şeyi bilemem ama bildiğim bazı şeyler var...</h2>
+    <div class="work-grid">
+        <div class="work-card reveal">
+            <div class="work-card-index">01</div>
+            <div class="work-card-body">
+                <h3>Backend Developer</h3>
+                <p>Kullanıcının hiç görmediği katmanlarda her şeyin sessizce ve doğru işlemesini sağlamak, beni asıl heyecanlandıran taraf.</p>
+            </div>
+            <div class="work-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M19 5H8M19 5v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+        </div>
+        <div class="work-card reveal">
+            <div class="work-card-index">02</div>
+            <div class="work-card-body">
+                <h3>Full-Stack Developer</h3>
+                <p>Bir fikri uçtan uca takip etmeyi ve hiçbir parçasına yabancı kalmadan bütünü yönetmeyi seviyorum. Arayüz tarafında yapay zeka destekli "vibe coding" ile hız kazanırken, tüm entegrasyon süreçlerini bizzat kurguluyorum.</p>
+            </div>
+            <div class="work-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M19 5H8M19 5v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+        </div>
+        <div class="work-card reveal">
+            <div class="work-card-index">03</div>
+            <div class="work-card-body">
+                <h3>DevOps &amp; Cloud</h3>
+                <p>Bir şeyin çalışması yetmez; güvenle ve kesintisiz çalışabilmesi gerekir, ben bu güveni inşa etmeyi seviyorum.</p>
+            </div>
+            <div class="work-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M19 5H8M19 5v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+        </div>
+        <div class="work-card reveal">
+            <div class="work-card-index">04</div>
+            <div class="work-card-body">
+                <h3>Data Science &amp; Analytics</h3>
+                <p>Ham verinin içindeki gürültüyü ayıklayıp arkasındaki hikâyeyi görünür kılmak, bana hep bir bulmaca çözmek kadar keyifli gelmiştir.</p>
+            </div>
+            <div class="work-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M19 5H8M19 5v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <svg class="work-circuit" width="100%" height="100%" viewBox="0 0 1400 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path id="sp1" d="M 0 500 L 200 500 L 200 300 L 450 300 L 450 100 L 750 100" />
+        <path id="sp2" d="M 1400 80 L 1150 80 L 1150 250 L 900 250 L 900 450 L 650 450 L 650 560" />
+        <path id="sp3" d="M 60 100 L 60 220 L 330 220 L 330 400 L 600 400 L 600 560" />
+        <path id="sp4" d="M 1400 480 L 1200 480 L 1200 320 L 980 320 L 980 150 L 780 150" />
+        <path id="sp5" d="M 0 580 L 250 580 L 250 380 L 500 380 L 500 550 L 780 550" />
+        <path id="sp6" d="M 1400 570 L 1100 570 L 1100 490 L 850 490 L 850 590" />
+
+        <circle class="node" cx="200" cy="500" r="4" /><circle class="node" cx="200" cy="300" r="4" />
+        <circle class="node" cx="450" cy="300" r="4" /><circle class="node" cx="450" cy="100" r="4" />
+        <circle class="node" cx="1150" cy="80" r="4" /><circle class="node" cx="1150" cy="250" r="4" />
+        <circle class="node" cx="900" cy="250" r="4" /><circle class="node" cx="900" cy="450" r="4" />
+        <circle class="node" cx="650" cy="450" r="4" /><circle class="node" cx="60" cy="220" r="4" />
+        <circle class="node" cx="330" cy="220" r="4" /><circle class="node" cx="330" cy="400" r="4" />
+        <circle class="node" cx="600" cy="400" r="4" /><circle class="node" cx="1200" cy="480" r="4" />
+        <circle class="node" cx="1200" cy="320" r="4" /><circle class="node" cx="980" cy="320" r="4" />
+        <circle class="node" cx="980" cy="150" r="4" />
+        <circle class="node" cx="250" cy="580" r="4" /><circle class="node" cx="250" cy="380" r="4" />
+        <circle class="node" cx="500" cy="380" r="4" /><circle class="node" cx="500" cy="550" r="4" />
+        <circle class="node" cx="1100" cy="570" r="4" /><circle class="node" cx="1100" cy="490" r="4" />
+        <circle class="node" cx="850" cy="490" r="4" />
+
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="9s" repeatCount="indefinite"><mpath href="#sp1" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="10s" begin="1.5s" repeatCount="indefinite"><mpath href="#sp2" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="7s" begin="3s" repeatCount="indefinite"><mpath href="#sp3" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="11s" begin=".7s" repeatCount="indefinite"><mpath href="#sp4" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="8s" begin="2.2s" repeatCount="indefinite"><mpath href="#sp5" /></animateMotion>
+        </circle>
+        <circle class="pulse" r="3.5">
+            <animateMotion dur="9.5s" begin="4s" repeatCount="indefinite"><mpath href="#sp6" /></animateMotion>
+        </circle>
+    </svg>
+    <div class="skills-inner">
+    <span class="eyebrow reveal">03 / YETENEKLER</span>
+    <h2 class="reveal">Bildiğim yerden sorarsan cevap alma olasılığın aşağıda, bilmediğim yerden soramaman için çalışmaya devam ediyorum...</h2>
+    <div class="skill-list">
+        <div class="skill reveal" data-pct="80">
+            <div class="skill-top"><span>HTML/CSS/JavaScript (VibeCoding)</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill reveal" data-pct="90">
+            <div class="skill-top"><span>C#</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill reveal" data-pct="75">
+            <div class="skill-top"><span>Cloud &amp; DevOps</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill reveal" data-pct="40">
+            <div class="skill-top"><span>Data Analysis</span><span class="skill-pct">40%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill reveal" data-pct="40">
+            <div class="skill-top"><span>Python</span><span class="skill-pct">40%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill reveal" data-pct="70">
+            <div class="skill-top"><span>MSSQL</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill reveal" data-pct="50">
+            <div class="skill-top"><span>React + Vite</span><span class="skill-pct">50%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+    </div>
+    </div>
+</section>

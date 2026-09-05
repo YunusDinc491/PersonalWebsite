@@ -1,0 +1,23 @@
+﻿@model PersonalWebsite.Models.BeniIseAl
+@{
+    ViewData["Title"] = "CV Yönetimi";
+}
+
+<h1>CV Yönetimi</h1>
+
+@if (Model != null)
+{
+    <p>Mevcut CV: <a href="@Model.Cv" target="_blank">@Model.Cv</a></p>
+}
+else
+{
+    <p>Henüz CV yüklenmemiş.</p>
+}
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data" class="admin-form">
+    <label>
+        CV Dosyası (PDF)
+        <input type="file" name="cvFile" accept="application/pdf" required />
+    </label>
+    <button type="submit" class="admin-btn">Yükle / Güncelle</button>
+</form>

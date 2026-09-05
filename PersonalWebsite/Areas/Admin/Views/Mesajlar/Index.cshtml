@@ -1,0 +1,37 @@
+﻿@model List<PersonalWebsite.Models.Iletisim>
+@{
+    ViewData["Title"] = "Mesajlar";
+}
+
+<h1>Gelen Mesajlar</h1>
+
+@if (!Model.Any())
+{
+    <p>Henüz mesaj yok.</p>
+}
+else
+{
+    <table class="admin-table">
+        <thead>
+            <tr><th>İsim</th><th>E-posta</th><th>Telefon</th><th>Firma</th><th>Konu</th><th>Mesaj</th><th></th></tr>
+        </thead>
+        <tbody>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>@m.Name</td>
+                    <td>@m.Eposta</td>
+                    <td>@m.TelNo</td>
+                    <td>@m.FirmaAdi</td>
+                    <td>@m.Konu</td>
+                    <td>@m.Mesajiniz</td>
+                    <td>
+                        <form asp-action="Delete" asp-route-id="@m.Id" method="post" onsubmit="return confirm('Silinsin mi?');">
+                            <button type="submit" class="admin-btn admin-btn-danger">Sil</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

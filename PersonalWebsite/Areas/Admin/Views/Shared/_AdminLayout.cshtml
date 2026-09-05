@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] — Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/admin.css" />
+</head>
+<body class="admin-body">
+    <div class="admin-shell">
+        <aside class="admin-sidebar">
+            <div class="admin-brand">YUNUS DINÇ<span>/ ADMIN</span></div>
+            <nav class="admin-nav">
+                <a asp-area="Admin" asp-controller="Admin" asp-action="Index">Dashboard</a>
+                <a asp-area="Admin" asp-controller="Proje" asp-action="Index">Projeler</a>
+                <a asp-area="Admin" asp-controller="Cv" asp-action="Index">CV</a>
+                <a asp-area="Admin" asp-controller="Mesajlar" asp-action="Index">Mesajlar</a>
+            </nav>
+            <a class="admin-back" asp-area="" asp-controller="Home" asp-action="Index">← Siteye Dön</a>
+        </aside>
+        <main class="admin-content">
+            @RenderBody()
+        </main>
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

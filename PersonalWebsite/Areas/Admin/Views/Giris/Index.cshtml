@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Girişi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/admin.css" />
+</head>
+<body class="admin-body" style="display:flex; align-items:center; justify-content:center; min-height:100vh;">
+    <form method="post" class="admin-form" style="background:var(--bg-panel); padding:40px; border:1px solid var(--border); border-radius:16px; width:320px;">
+        <h1 style="font-family:'Tektur',sans-serif; font-size:20px; text-align:center; margin:0;">Admin Girişi</h1>
+        @if (ViewBag.Hata != null)
+        {
+            <p style="color:#ff9a9a; font-size:13px; margin:0;">@ViewBag.Hata</p>
+        }
+        <label>
+            Şifre
+            <input type="password" name="sifre" autofocus required />
+        </label>
+        <button type="submit" class="admin-btn">Giriş Yap</button>
+    </form>
+</body>
+</html>

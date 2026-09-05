@@ -1,0 +1,35 @@
+﻿@model List<PersonalWebsite.Models.Proje>
+@{
+    ViewData["Title"] = "Projeler";
+}
+
+<div class="admin-toolbar">
+    <h1>Projeler</h1>
+    <a class="admin-btn" asp-action="Create">+ Yeni Proje</a>
+</div>
+
+<table class="admin-table">
+    <thead>
+        <tr><th>Görsel</th><th>Ad</th><th>Teknolojiler</th><th></th></tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(p.ProjeFoto))
+                    {
+                        <img src="@p.ProjeFoto" class="admin-thumb" />
+                    }
+                </td>
+                <td>@p.ProjeAdi</td>
+                <td>@p.KullanilanTeknolojiler</td>
+                <td>
+                    <form asp-action="Delete" asp-route-id="@p.Id" method="post" onsubmit="return confirm('Silinsin mi?');">
+                        <button type="submit" class="admin-btn admin-btn-danger">Sil</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
